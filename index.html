@@ -82,10 +82,16 @@ function move(e){
 }
 function wake(){ if(!raf) raf=requestAnimationFrame(frame); }
 const area=document.body;
+const leave=()=>{px=-1;speed=0;wake();};      // 마우스가 나가면 그때부터 서서히 닫힘
 area.addEventListener('pointermove',move,{passive:true});
 area.addEventListener('pointerdown',move,{passive:true});
-area.addEventListener('pointerleave',()=>{px=-1;speed=0;},{passive:true});
-addEventListener('blur',()=>{px=-1;speed=0;});
+area.addEventListener('pointerleave',leave,{passive:true});
+document.documentElement.addEventListener('mouseleave',leave,{passive:true});
+document.addEventListener('mouseleave',leave,{passive:true});
+addEventListener('blur',leave);
+// 터치는 손가락을 떼면 끝
+area.addEventListener('pointerup',e=>{ if(e.pointerType==='touch') leave(); },{passive:true});
+area.addEventListener('pointercancel',leave,{passive:true});
 
 /* 한 프레임: 마스크를 옅게 지우고 → 점 격자로 읽어 → 컬러 이미지를 점 모양으로 그림 */
 function frame(){
@@ -95,6 +101,8 @@ function frame(){
   mctx.globalCompositeOperation='destination-out'; mctx.fillStyle='rgba(0,0,0,'+FADE+')';
   mctx.fillRect(0,0,mask.width,mask.height); mctx.globalCompositeOperation='source-over';
   speed*=.93;
+  // 마우스가 올라가 있는 동안은 가만히 있어도 그 자리를 계속 열어 둠
+  if(px>=0) stamp(px,py,W*(R_BASE+R_SPEED*speed),.45);
   // 마스크 → 격자 (한 칸 = 점 하나의 밝기)
   gctx.clearRect(0,0,cols,rows); gctx.drawImage(mask,0,0,cols,rows);
   const d=gctx.getImageData(0,0,cols,rows).data;
