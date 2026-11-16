@@ -1,15 +1,118 @@
-﻿<style>
-@property --r{syntax:'<percentage>';inherits:false;initial-value:-30%}
-body{margin:0}
-.s{position:relative;width:100%;aspect-ratio:1066/320}
-.b{position:absolute;left:0;top:10.6%;width:100%;height:81.3%;overflow:hidden;background:url(1.webp) 50% 100%/100% auto;display:grid;grid:repeat(10,1fr)/repeat(41,1fr)}
-p{margin:0;position:relative}
-p::before{content:'';position:absolute;inset:-1300%;pointer-events:none;--r:-30%;background:url(2.webp) var(--x) var(--y)/151.9% auto;transition:--r 1.6s cubic-bezier(.2,.6,.3,1);-webkit-mask:radial-gradient(closest-side,#000 var(--r),#0000 calc(var(--r) + 25%))0 0/1.852% 1.852%,radial-gradient(closest-side,#000 30%,#0000)50% 50%/100% 100% no-repeat;-webkit-mask-composite:source-in;mask:radial-gradient(closest-side,#000 var(--r),#0000 calc(var(--r) + 25%))0 0/1.852% 1.852%,radial-gradient(closest-side,#000 30%,#0000)50% 50%/100% 100% no-repeat;mask-composite:intersect}
-p:hover::before{--r:150%;transition:--r .1s linear}
-p:nth-child(41n+1){--x:-92.9%}p:nth-child(41n+2){--x:-85.7%}p:nth-child(41n+3){--x:-78.6%}p:nth-child(41n+4){--x:-71.4%}p:nth-child(41n+5){--x:-64.3%}p:nth-child(41n+6){--x:-57.1%}p:nth-child(41n+7){--x:-50%}p:nth-child(41n+8){--x:-42.9%}p:nth-child(41n+9){--x:-35.7%}p:nth-child(41n+10){--x:-28.6%}p:nth-child(41n+11){--x:-21.4%}p:nth-child(41n+12){--x:-14.3%}p:nth-child(41n+13){--x:-7.1%}p:nth-child(41n+14){--x:0%}p:nth-child(41n+15){--x:7.1%}p:nth-child(41n+16){--x:14.3%}p:nth-child(41n+17){--x:21.4%}p:nth-child(41n+18){--x:28.6%}p:nth-child(41n+19){--x:35.7%}p:nth-child(41n+20){--x:42.9%}p:nth-child(41n+21){--x:50%}p:nth-child(41n+22){--x:57.1%}p:nth-child(41n+23){--x:64.3%}p:nth-child(41n+24){--x:71.4%}p:nth-child(41n+25){--x:78.6%}p:nth-child(41n+26){--x:85.7%}p:nth-child(41n+27){--x:92.9%}p:nth-child(41n+28){--x:100%}p:nth-child(41n+29){--x:107.1%}p:nth-child(41n+30){--x:114.3%}p:nth-child(41n+31){--x:121.4%}p:nth-child(41n+32){--x:128.6%}p:nth-child(41n+33){--x:135.7%}p:nth-child(41n+34){--x:142.9%}p:nth-child(41n+35){--x:150%}p:nth-child(41n+36){--x:157.1%}p:nth-child(41n+37){--x:164.3%}p:nth-child(41n+38){--x:171.4%}p:nth-child(41n+39){--x:178.6%}p:nth-child(41n+40){--x:185.7%}p:nth-child(41n+41){--x:192.9%}p:nth-child(-n+41){--y:71.6%}p:nth-child(n+42):nth-child(-n+82){--y:64.6%}p:nth-child(n+83):nth-child(-n+123){--y:57.5%}p:nth-child(n+124):nth-child(-n+164){--y:50.4%}p:nth-child(n+165):nth-child(-n+205){--y:43.3%}p:nth-child(n+206):nth-child(-n+246){--y:36.2%}p:nth-child(n+247):nth-child(-n+287){--y:29.1%}p:nth-child(n+288):nth-child(-n+328){--y:22%}p:nth-child(n+329):nth-child(-n+369){--y:14.9%}p:nth-child(n+370):nth-child(-n+410){--y:7.8%}
-.s img{position:absolute;pointer-events:none}
-.t{left:.66%;top:0;width:58.4%}
-.d{left:87.1%;top:31.2%;width:11.6%}
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Hover Banner</title>
+<style>
+  html,body{margin:0;background:transparent;overflow:hidden}
+  .s{position:relative;width:100%;aspect-ratio:1066/320}
+  .b{position:absolute;left:0;top:10.6%;width:100%;height:81.3%;overflow:hidden;background:#000}
+  .b canvas{position:absolute;inset:0;width:100%;height:100%;display:block}
+  .s img.o{position:absolute;pointer-events:none;user-select:none;-webkit-user-drag:none}
+  .t{left:.66%;top:0;width:58.4%}
+  .d{left:87.1%;top:31.2%;width:11.6%}
 </style>
-<div class=s><div class=b><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p></div><img class=t src=title.png><img class=d src=deco.png></div>
+</head>
+<body>
+<div class="s" id="s">
+  <div class="b" id="b"><canvas id="base"></canvas><canvas id="rv"></canvas></div>
+  <img class="o t" id="title" alt="">
+  <img class="o d" id="deco" alt="">
+</div>
+<script>
+/* ═══ 설정 ═══ */
+const IMG_BASE  = 'https://cdn.phototourl.com/anon/2026-11-16-e0dce13a-9078-4807-a2e7-817fe7c1a113.webp'; // 위 (하프톤)
+const IMG_REVEAL= 'https://cdn.phototourl.com/anon/2026-11-16-7957a91f-89ee-4bfb-a746-181f31d6b5de.webp'; // 아래 (컬러)
+const IMG_TITLE = 'https://cdn.phototourl.com/anon/2026-11-16-3da63dbd-656e-4e9a-93c4-fe28046cc2ad.png';
+const IMG_DECO  = 'https://cdn.phototourl.com/anon/2026-11-16-813566d5-90a8-410b-b508-c68d0f5b15ad.png';
+const R_BASE = 0.10;   // 평소 원 반지름 (배너 폭 대비)
+const R_SPEED= 0.16;   // 빨리 움직일 때 더해지는 반지름
+const FADE   = 0.045;  // 클수록 빨리 닫힘 (0.02 느림 ~ 0.1 빠름)
+const DOT    = 7;      // 하프톤 점 간격(px, 배너 폭 1066 기준)
+/* ═══════════ */
 
+const $=id=>document.getElementById(id);
+$('title').src=IMG_TITLE; $('deco').src=IMG_DECO;
+const bc=$('base'), rc=$('rv'), bctx=bc.getContext('2d'), rctx=rc.getContext('2d');
+const mask=document.createElement('canvas'), mctx=mask.getContext('2d',{willReadFrequently:true});
+const grid=document.createElement('canvas'), gctx=grid.getContext('2d',{willReadFrequently:true});
+const A=new Image(), B=new Image();
+let W=0,H=0,dpr=1,cell=7,cols=0,rows=0,ready=0;
+
+function load(){ A.onload=B.onload=()=>{ if(++ready===2){ resize(); } }; A.src=IMG_BASE; B.src=IMG_REVEAL; }
+function drawCover(ctx,img){          // 가로를 꽉 채우고 아래를 맞춰 자름
+  const sc=W/img.naturalWidth, h=img.naturalHeight*sc;
+  ctx.drawImage(img,0,H-h,W,h);
+}
+function resize(){
+  const r=$('b').getBoundingClientRect(); W=Math.round(r.width); H=Math.round(r.height);
+  if(!W||!H) return;
+  dpr=Math.min(2,window.devicePixelRatio||1);
+  for(const c of [bc,rc]){ c.width=Math.round(W*dpr); c.height=Math.round(H*dpr); }
+  bctx.setTransform(dpr,0,0,dpr,0,0); rctx.setTransform(dpr,0,0,dpr,0,0);
+  bctx.clearRect(0,0,W,H); if(ready===2) drawCover(bctx,A);
+  mask.width=Math.max(2,Math.round(W/2)); mask.height=Math.max(2,Math.round(H/2));
+  cell=Math.max(4,DOT*W/1066);
+  cols=Math.ceil(W/cell); rows=Math.ceil(H/cell); grid.width=cols; grid.height=rows;
+  mctx.clearRect(0,0,mask.width,mask.height);
+  frame();
+}
+addEventListener('resize',resize);
+if(window.ResizeObserver) new ResizeObserver(resize).observe($('b'));
+
+/* 포인터 */
+let px=-1,py=-1,vx=0,speed=0,last=0,energy=0,raf=0,inside=false;
+function stamp(x,y,r,a){
+  const g=mctx.createRadialGradient(x/2,y/2,0,x/2,y/2,r/2);
+  g.addColorStop(0,'rgba(255,255,255,'+a+')'); g.addColorStop(.55,'rgba(255,255,255,'+(a*.8)+')'); g.addColorStop(1,'rgba(255,255,255,0)');
+  mctx.fillStyle=g; mctx.beginPath(); mctx.arc(x/2,y/2,r/2,0,6.2832); mctx.fill();
+}
+function move(e){
+  const rect=$('b').getBoundingClientRect();
+  const x=e.clientX-rect.left, y=e.clientY-rect.top, now=performance.now();
+  const dt=Math.max(8,now-last);
+  if(px>=0){
+    const dist=Math.hypot(x-px,y-py), v=dist/dt*16;           // 프레임(16ms)당 이동 px
+    speed+= (Math.min(v/W*14,1)-speed)*.35;                    // 속도 0~1 (부드럽게)
+    const r=W*(R_BASE+R_SPEED*speed), step=Math.max(4,r*.3), n=Math.max(1,Math.ceil(dist/step));
+    for(let i=1;i<=n;i++) stamp(px+(x-px)*i/n, py+(y-py)*i/n, r, .9);
+  }else stamp(x,y,W*R_BASE,1);
+  px=x; py=y; last=now; energy=1; wake();
+}
+function wake(){ if(!raf) raf=requestAnimationFrame(frame); }
+const area=document.body;
+area.addEventListener('pointermove',move,{passive:true});
+area.addEventListener('pointerdown',move,{passive:true});
+area.addEventListener('pointerleave',()=>{px=-1;speed=0;},{passive:true});
+addEventListener('blur',()=>{px=-1;speed=0;});
+
+/* 한 프레임: 마스크를 옅게 지우고 → 점 격자로 읽어 → 컬러 이미지를 점 모양으로 그림 */
+function frame(){
+  raf=0;
+  if(ready<2||!W) return;
+  // 서서히 닫힘
+  mctx.globalCompositeOperation='destination-out'; mctx.fillStyle='rgba(0,0,0,'+FADE+')';
+  mctx.fillRect(0,0,mask.width,mask.height); mctx.globalCompositeOperation='source-over';
+  speed*=.93;
+  // 마스크 → 격자 (한 칸 = 점 하나의 밝기)
+  gctx.clearRect(0,0,cols,rows); gctx.drawImage(mask,0,0,cols,rows);
+  const d=gctx.getImageData(0,0,cols,rows).data;
+  rctx.clearRect(0,0,W,H);
+  rctx.save(); rctx.beginPath();
+  let any=0;
+  for(let j=0;j<rows;j++) for(let i=0;i<cols;i++){
+    const a=d[(j*cols+i)*4+3]/255;
+    if(a<.04) continue; any=1;
+    const r=cell*.78*Math.sqrt(Math.min(1,a*1.25));
+    const cx=(i+.5)*cell, cy=(j+.5)*cell;
+    rctx.moveTo(cx+r,cy); rctx.arc(cx,cy,r,0,6.2832);
+  }
+  rctx.clip(); if(any) drawCover(rctx,B); rctx.restore();
+  energy*= .97;
+  if(any||px>=0) raf=requestAnimationFrame(frame);
+}
+load();
+</script>
+</body>
+</html>
